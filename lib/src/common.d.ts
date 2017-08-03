@@ -9,6 +9,7 @@ export interface Options {
     defaultVersion?: string;
     authProvider?: (done: AuthProviderCallback) => void;
     baseUrl?: string;
+    platform?: string;
 }
 export interface URLComponents {
     host: string;

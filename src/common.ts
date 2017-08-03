@@ -13,7 +13,8 @@ export interface Options {
     debugLogging?: boolean,
     defaultVersion?: string,
     authProvider?: (done:AuthProviderCallback) => void,
-    baseUrl?: string
+    baseUrl?: string,
+    platform?: string
 }
 
 // http://graph.microsoft.com/VERSION/PATH?QUERYSTRING&OTHER_QUERY_PARAMS

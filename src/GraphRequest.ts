@@ -332,8 +332,11 @@ export class GraphRequest {
         let request = requestBuilder
             .set('Authorization', 'Bearer ' + accessToken)
             .set(this._headers)
-            .set('SdkVersion', "graph-js-" + packageInfo.version)
 
+        if (this.config.platform !== 'web') {
+            request.set('SdkVersion', "graph-js-" + packageInfo.version)
+        }
+        
         if (this._responseType !== undefined) {
             request.responseType(this._responseType);
         }
